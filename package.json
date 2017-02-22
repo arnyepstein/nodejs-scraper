@@ -1,0 +1,38 @@
+{
+  "name": "sandbox",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./scrape"
+  },
+  "dependencies": {
+    "commander": "^2.9.0",
+    "html-entities": "^1.2.0",
+    "http": "0.0.0",
+    "http-status-codes": "^1.0.6",
+    "jquery": "^3.1.1",
+    "jsdom": "^9.9.1",
+    "moment": "^2.17.0",
+    "moment-timezone": "^0.5.10",
+    "promise": "^7.1.1",
+    "urldecode": "^1.0.1"
+  },
+  "devDependencies": {
+    "aws-sdk-mock": "^1.6.1",
+    "grunt": "~1.0.0",
+    "grunt-concurrent": "^2.3.1",
+    "grunt-contrib-clean": "^1.0.0",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-jshint": "^1.1.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-env": "~0.4.1",
+    "grunt-istanbul": "^0.7.2",
+    "grunt-mocha-test": "~0.9.0",
+    "grunt-nodemon": "^0.4.2",
+    "nock": "~0.27.2",
+    "should": "~3.1.2",
+    "sinon": "^1.17.6",
+    "supertest": "~0.9.0",
+    "unit.js": "^2.0.0"
+  }
+}
