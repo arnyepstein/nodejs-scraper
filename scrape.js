@@ -43,7 +43,7 @@ function scrapeSite() {
 	// const urlData = Url.parse(urlstr);
 
 	// Do the main page
-    const pageRequest = scraper.BaseRequest.create(urlstr);
+    const pageRequest = scraper.newRequest(urlstr);
 	return scraper.requestPage( pageRequest ).then(
 		(loadedPage) => {
 			const $ = loadedPage.window.$;
@@ -71,7 +71,7 @@ function scrapeSite() {
 // Returns a Promise which is resolved when all content has been saved.
 function loadHandbookPage(index, urlstr, referer) {
     // Do the login page
-    const pageRequest = scraper.BaseRequest.create(urlstr, referer);
+    const pageRequest = scraper.newRequest(urlstr, referer);
     return scraper.requestPage( pageRequest ).then(
         (loadedPage) => {
             const $ = loadedPage.window.$;
@@ -99,7 +99,7 @@ function loadHandbookPage(index, urlstr, referer) {
 // Downloads content from a URL
 // Returns a Promise which is resolved when the content has been downloaded and saved
 function loadContent(index, urlstr, referer) {
-    const pageRequest = scraper.BaseRequest.create(urlstr, referer);
+    const pageRequest = scraper.newRequest(urlstr, referer);
     pageRequest.headers["accept-encoding"] = "gzip";
 
     const url = Url.format(pageRequest.urlData);
